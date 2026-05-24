@@ -25,7 +25,17 @@ export const venue = {
     "https://www.google.com/maps/search/?api=1&query=Olinda+PE+Terra%C3%A7o+Mourisco",
 } as const;
 
-export const giftListUrl = "https://www.example.com/lista-de-presentes";
+export const giftListUrl = "/lista-de-presentes";
+
+export const giftListSubtitle =
+  "Escolha um item da lista para presentear os noivos de forma simbólica.";
+
+export const pix = {
+  key: "casamento.bel.bernardo@gmail.com",
+  qrCodeImage: "" as string,
+  instructions:
+    "Para presentear os noivos agora mesmo, é só abrir o aplicativo do seu banco e apontar a câmera para o QR Code ao lado.",
+} as const;
 
 export const giftGridImages = [
   { src: "/coffee.png", alt: "Café" },
