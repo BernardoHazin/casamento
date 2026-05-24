@@ -1,26 +1,38 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --cream: #fbf6f1;
+  --terracotta: #e8753d;
+  --sage: #8faf9c;
+  --wedding-slate: #6b7c8f;
+  --foreground-body: #2c2825;
+  --gift-panel: #f0e6dc;
+  --blue-grey: #2e547d;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-cream: var(--cream);
+  --color-terracotta: var(--terracotta);
+  --color-sage: var(--sage);
+  --color-wedding-slate: var(--wedding-slate);
+  --color-foreground: var(--foreground-body);
+  --color-gift-panel: var(--gift-panel);
+  --color-blue-grey: var(--blue-grey);
+  --font-script: var(--font-script-family);
+  --font-great-vibes: var(--font-great-vibes-family);
+  --font-serif: var(--font-serif-family);
+  --font-sans: var(--font-serif-family);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.root {
+  isolation: isolate;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  background: var(--cream);
+  color: var(--foreground-body);
+  font-family:
+    var(--font-great-vibes-family), var(--font-serif-family),
+    "Cormorant Garamond", Georgia, serif;
 }

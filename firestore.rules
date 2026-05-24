@@ -1,0 +1,25 @@
+rules_version = '2';
+
+// ===============================================================
+// Assumed Data Model
+// ===============================================================
+//
+// Collection: rsvps
+// Document ID: auto-generated
+// Fields:
+//   - name: string (required, 1-120 chars) - guest full name
+//   - attendance: string (required) - "sim" | "nao" | "talvez"
+//   - receivedAt: timestamp (required) - submission time
+//
+// Writes happen only via Firebase Admin SDK in Next.js server actions.
+// Client access is denied.
+//
+// ===============================================================
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
