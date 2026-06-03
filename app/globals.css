@@ -8,6 +8,7 @@
   --foreground-body: #2c2825;
   --gift-panel: #f0e6dc;
   --blue-grey: #2e547d;
+  --lavender-mist: #f1f4ff;
 }
 
 @theme inline {
@@ -18,6 +19,7 @@
   --color-foreground: var(--foreground-body);
   --color-gift-panel: var(--gift-panel);
   --color-blue-grey: var(--blue-grey);
+  --color-lavender-mist: var(--lavender-mist);
   --font-script: var(--font-script-family);
   --font-great-vibes: var(--font-great-vibes-family);
   --font-serif: var(--font-serif-family);

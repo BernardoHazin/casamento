@@ -16,6 +16,51 @@ export type Convidado = {
 
 export type RsvpConfirmation = "sim" | "nao";
 
+export type RsvpStatus = RsvpConfirmation | "pendente";
+
+export function getRsvpStatus(confirmed: string): RsvpStatus {
+  if (confirmed === "sim" || confirmed === "nao") {
+    return confirmed;
+  }
+
+  return "pendente";
+}
+
+export type RsvpSummary = {
+  total: number;
+  confirmed: number;
+  declined: number;
+  pending: number;
+  withCompanion: number;
+};
+
+export function summarizeRsvp(guests: Convidado[]): RsvpSummary {
+  return guests.reduce<RsvpSummary>(
+    (summary, guest) => {
+      const status = getRsvpStatus(guest.confirmed);
+
+      return {
+        total: summary.total + 1,
+        confirmed: summary.confirmed + (status === "sim" ? 1 : 0),
+        declined: summary.declined + (status === "nao" ? 1 : 0),
+        pending: summary.pending + (status === "pendente" ? 1 : 0),
+        withCompanion:
+          summary.withCompanion +
+          (status === "sim" && guest.hasCompanion && guest.companion?.trim()
+            ? 1
+            : 0),
+      };
+    },
+    {
+      total: 0,
+      confirmed: 0,
+      declined: 0,
+      pending: 0,
+      withCompanion: 0,
+    },
+  );
+}
+
 function normalizeName(name: string): string {
   return name.trim().replace(/\s+/g, " ");
 }

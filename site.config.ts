@@ -103,16 +103,18 @@ export const timeline = [
 
 export const dressCode = {
   forHer: [
-    "Vestido longo ou midi sofisticado",
-    "Tecidos leves e fluidos",
-    "Salto bloco ou rasteirinha elegante (local com pedras)",
-    "Evitar branco e tons muito próximos ao off-white",
+    "Vestido longo ou midi, de modelagem fluida;",
+    "Tecidos leves e elegantes;",
+    "Cores suaves ou sofisticadas (como azul, verde, rosé, tons terrosos);",
+    "Evitar branco, off-white e tons muito claros;",
+    "Sandálias ou sapatos elegantes e confortáveis.",
   ],
   forHim: [
-    "Paletó e calça social ou terno completo",
-    "Camisa social; gravata é bem-vinda",
-    "Sapato social fechado",
-    "Cores sóbrias que conversem com o entardecer",
+    "Camisa social ou camisa de tecido leve;",
+    "Calça de alfaiataria ou chino;",
+    "Blazer opcional;",
+    "Gravata opcional;",
+    "Evitar cores muito escuras, como preto total.",
   ],
 } as const;
 

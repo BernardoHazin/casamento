@@ -1,65 +1,94 @@
 import Image from "next/image";
 import { dressCode } from "@/site.config";
-import { IconBowTie } from "./icons";
+
+type DressCodeCardProps = {
+  title: string;
+  items: readonly string[];
+  imageSrc: string;
+  imageAlt: string;
+  imageFirst: boolean;
+};
+
+function DressCodeCard({
+  title,
+  items,
+  imageSrc,
+  imageAlt,
+  imageFirst,
+}: DressCodeCardProps) {
+  const illustration = (
+    <Image
+      src={imageSrc}
+      alt={imageAlt}
+      width={120}
+      height={249}
+      className={`absolute -top-4 ${imageFirst ? "-left-15" : "-right-15"}`}
+    />
+  );
+
+  const content = (
+    <div
+      className={`min-w-0 flex-1 ${imageFirst ? "text-right pl-10" : "text-left pr-10"}`}
+    >
+      <h3 className="font-serif text-sm font-semibold text-blue-grey">
+        {title}
+      </h3>
+      <ul className="mt-2 space-y-1 font-serif text-[0.7rem] leading-snug text-blue-grey">
+        {items.map((item) => (
+          <li key={item}>{item}</li>
+        ))}
+      </ul>
+    </div>
+  );
+
+  return (
+    <div className="relative w-[310px] h-[180px] flex items-center gap-2 rounded-[1.75rem] bg-white/55 px-3 py-4">
+      {illustration}
+      {content}
+    </div>
+  );
+}
 
 export function DressCodeSection() {
   return (
-    <section className="bg-white px-6 py-16 sm:px-10 sm:py-20">
-      <div className="mx-auto max-w-[600px]">
-        <div className="flex flex-col items-center gap-4 text-center">
-          <IconBowTie className="h-10 w-10 text-terracotta" />
-          <h2 className="font-serif text-3xl font-semibold tracking-[0.12em] text-wedding-slate sm:text-4xl">
-            DRESS CODE
-          </h2>
-        </div>
+    <section className="relative flex flex-col items-center gap-4 bg-lavender-mist px-4 pt-10 pb-80">
+      <Image
+        src="/dresscode-bow-tie.png"
+        alt=""
+        width={48}
+        height={48}
+        className=""
+      />
 
-        <div className="mt-12 grid gap-10 md:grid-cols-2 md:gap-12">
-          <div className="flex flex-col items-center text-center">
-            <div className="relative aspect-[4/5] w-full max-w-sm overflow-hidden rounded-3xl bg-cream/50 ring-1 ring-wedding-slate/10">
-              <Image
-                src="/dresscode-1.png"
-                alt="Inspiração de vestido para convidadas"
-                fill
-                className="object-cover object-center"
-                sizes="(max-width: 768px) 100vw, 400px"
-              />
-            </div>
-            <h3 className="mt-6 font-serif text-xl font-semibold tracking-wide text-wedding-slate">
-              PARA ELAS
-            </h3>
-            <ul className="mt-4 space-y-2 text-left font-sans text-foreground/85">
-              {dressCode.forHer.map((item) => (
-                <li key={item} className="flex gap-2">
-                  <span className="mt-2 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-terracotta" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+      <div className="text-center">
+        <h2 className="font-serif text-xl font-semibold text-blue-grey">
+          DRESSCODE
+        </h2>
+        <p className="mt-1 font-serif text-sm font-medium text-terracotta">
+          ESPORTE FINO
+        </p>
+      </div>
 
-          <div className="flex flex-col items-center text-center">
-            <div className="relative aspect-[4/5] w-full max-w-sm overflow-hidden rounded-3xl bg-cream/50 ring-1 ring-wedding-slate/10">
-              <Image
-                src="/dresscode-2.png"
-                alt="Inspiração de traje para convidados"
-                fill
-                className="object-cover object-center"
-                sizes="(max-width: 768px) 100vw, 400px"
-              />
-            </div>
-            <h3 className="mt-6 font-serif text-xl font-semibold tracking-wide text-wedding-slate">
-              PARA ELES
-            </h3>
-            <ul className="mt-4 space-y-2 text-left font-sans text-foreground/85">
-              {dressCode.forHim.map((item) => (
-                <li key={item} className="flex gap-2">
-                  <span className="mt-2 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-terracotta" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+      <div className="flex w-full flex-col gap-8 items-center">
+        <DressCodeCard
+          title="PARA ELAS:"
+          items={dressCode.forHer}
+          imageSrc="/dresscode-couple-her.png"
+          imageAlt="Inspiração de vestido para convidadas"
+          imageFirst
+        />
+
+        <DressCodeCard
+          title="PARA ELES:"
+          items={dressCode.forHim}
+          imageSrc="/dresscode-couple-him.png"
+          imageAlt="Inspiração de traje para convidados"
+          imageFirst={false}
+        />
+      </div>
+
+      <div className="absolute left-0 bottom-0">
+        <Image src="/dresscode-footer.png" alt="" width={500} height={249} />
       </div>
     </section>
   );

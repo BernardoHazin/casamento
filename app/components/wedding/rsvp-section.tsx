@@ -28,7 +28,7 @@ export function RsvpSection({ guests }: RsvpSectionProps) {
   function handleGuestChange(guest: Convidado | null) {
     setSelectedGuest(guest);
     setAttendance(guest ? getStoredAttendance(guest.confirmed) : "");
-    setCompanionName(guest?.hasCompanion ? guest.companion ?? "" : "");
+    setCompanionName(guest?.hasCompanion ? (guest.companion ?? "") : "");
   }
 
   return (
@@ -47,12 +47,15 @@ export function RsvpSection({ guests }: RsvpSectionProps) {
       <div className="mx-auto flex max-w-[600px] flex-col items-center gap-8 text-center">
         <Image src="/email.png" alt="Email" width={42} height={42} />
 
-        <h2 className="font-serif text-3xl font-semibold tracking-[0.12em] text-wedding-slate sm:text-4xl">
+        <h2 className="font-serif text-xl font-semibold tracking-[0.12em] text-wedding-slate">
           RSVP
         </h2>
 
         <form action={formAction} className="w-full space-y-6 text-left">
-          <GuestAutocomplete guests={guests} onGuestChange={handleGuestChange} />
+          <GuestAutocomplete
+            guests={guests}
+            onGuestChange={handleGuestChange}
+          />
 
           {selectedGuest?.hasCompanion ? (
             <div className="flex flex-col gap-2">

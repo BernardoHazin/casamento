@@ -20,8 +20,8 @@ export function HeroSection() {
         <Image
           src="/flower-3.png"
           alt=""
-          width={440}
-          height={400}
+          width={240}
+          height={200}
           className="object-cover object-center"
           priority
         />
