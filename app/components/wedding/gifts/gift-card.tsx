@@ -25,7 +25,7 @@ export function GiftCard({ presente }: GiftCardProps) {
           {presente.quotes}/{PRESENTE_TOTAL_QUOTES}
         </p>
 
-        <div className="mx-auto my-3 flex h-40 w-40 items-center justify-center">
+        <div className="mx-auto my-3 flex h-30 w-30 items-center justify-center">
           <Image
             src={`/gifts/${presente.icon}.png`}
             alt=""
