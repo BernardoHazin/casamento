@@ -14,14 +14,16 @@ export default async function Home() {
   const guests = isFirebaseClientConfigured() ? await getConvidados() : [];
 
   return (
-    <main className="flex flex-1 flex-col max-w-[500px] mx-auto">
+    <main className="flex w-full min-w-0 flex-1 flex-col">
       <HeroSection />
-      <CountdownSection />
-      <VenueSection />
-      <GiftListSection />
-      <RsvpSection guests={guests} />
-      <TimelineSection />
-      <DressCodeSection />
+      <div className="mx-auto flex w-full min-w-0 max-w-[500px] flex-col">
+        <CountdownSection />
+        <VenueSection />
+        <GiftListSection />
+        <RsvpSection guests={guests} />
+        <TimelineSection />
+        <DressCodeSection />
+      </div>
     </main>
   );
 }

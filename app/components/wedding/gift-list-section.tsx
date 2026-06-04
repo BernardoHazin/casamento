@@ -15,7 +15,7 @@ export function GiftListSection() {
             height={42}
           />
 
-          <h2 className="font-serif text-xl font-semibold text-wedding-slate">
+          <h2 className="font-cormorant-sc text-xl font-semibold text-wedding-slate">
             Lista de Presentes
           </h2>
 

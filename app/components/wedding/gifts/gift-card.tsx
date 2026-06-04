@@ -25,8 +25,8 @@ export function GiftCard({ presente }: GiftCardProps) {
           {presente.quotes}/{PRESENTE_TOTAL_QUOTES}
         </p>
 
-        <div className="mx-auto my-3 flex h-36 w-36 items-center justify-center">
-          <Image src={`/${presente.icon}.png`} alt="" width={150} height={150} />
+        <div className="mx-auto my-3 flex h-40 w-40 items-center justify-center">
+          <Image src={`/${presente.icon}.png`} alt="" width={160} height={80} />
         </div>
 
         <h3 className="min-h-14 text-center font-serif text-base leading-snug text-blue-grey">
@@ -77,7 +77,7 @@ export function GiftCard({ presente }: GiftCardProps) {
           </defs>
         </svg>
 
-        <p className="text-center font-sans text-md font-medium text-foreground/85">
+        <p className="text-center font-sans text-md font-medium text-blue-grey">
           {formatPresentePrice(presente.price)}
         </p>
 

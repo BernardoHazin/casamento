@@ -5,8 +5,8 @@ export function TimelineSection() {
     <section className="bg-linear-to-b from-cream via-white to-lavender-mist px-6 py-16 flex flex-col items-center gap-4">
       <Image src="/heart.png" alt="Heart" width={20} height={20} />
 
-      <h2 className="font-serif text-xl font-semibold tracking-[0.12em] text-wedding-slate">
-        CRONOGRAMA
+      <h2 className="font-cormorant-sc text-xl font-semibold tracking-[0.12em] text-wedding-slate">
+        Cronograma
       </h2>
 
       <p className="text-upper w-full font-serif text-2xl mt-4 leading-[1.20] text-terracotta text-center">

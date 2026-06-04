@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import {
   Cormorant_Garamond,
+  Cormorant_SC,
   Great_Vibes,
   Mrs_Saint_Delafield,
 } from "next/font/google";
@@ -28,6 +29,13 @@ const cormorant = Cormorant_Garamond({
   display: "swap",
 });
 
+const cormorantSc = Cormorant_SC({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+  variable: "--font-cormorant-sc-family",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "Isabela & Bernardo — Casamento",
   description:
@@ -42,10 +50,12 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${scriptFont.variable} ${greatVibes.variable} ${cormorant.variable} h-full antialiased`}
+      className={`${scriptFont.variable} ${greatVibes.variable} ${cormorant.variable} ${cormorantSc.variable} h-full w-full antialiased`}
     >
-      <body className="min-h-full flex flex-col text-foreground">
-        <div className="root min-h-full flex flex-col flex-1">{children}</div>
+      <body className="flex min-h-full w-full flex-col text-foreground">
+        <div className="root flex min-h-full w-full flex-1 flex-col mx-auto max-w-[500px]">
+          {children}
+        </div>
         <ToastProvider />
       </body>
     </html>

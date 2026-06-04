@@ -46,7 +46,7 @@ export function GuestAutocomplete({
     <div className="relative flex flex-col gap-2">
       <label
         htmlFor="guest-search"
-        className="font-sans text-sm font-medium text-foreground/80"
+        className="font-sans text-sm font-medium text-blue-grey"
       >
         Nome e sobrenome
       </label>
@@ -75,7 +75,11 @@ export function GuestAutocomplete({
           className="absolute top-full z-50 mt-2 max-h-60 w-full overflow-auto rounded-xl border border-wedding-slate/15 bg-white py-1 shadow-lg"
         >
           {filteredGuests.map((guest) => (
-            <li key={guest.id} role="option" aria-selected={selectedId === guest.id}>
+            <li
+              key={guest.id}
+              role="option"
+              aria-selected={selectedId === guest.id}
+            >
               <button
                 type="button"
                 onMouseDown={(event) => event.preventDefault()}

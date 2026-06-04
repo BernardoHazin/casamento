@@ -14,7 +14,7 @@ export function CountdownSection() {
   const [now, setNow] = useState(() => Date.now());
 
   useEffect(() => {
-    const id = window.setInterval(() => setNow(Date.now()), 1000);
+    const id = window.setInterval(() => setNow(Date.now()), 60_000);
     return () => window.clearInterval(id);
   }, []);
 
@@ -22,13 +22,11 @@ export function CountdownSection() {
   const days = Math.floor(remaining / 86400000);
   const hours = Math.floor((remaining % 86400000) / 3600000);
   const minutes = Math.floor((remaining % 3600000) / 60000);
-  const seconds = Math.floor((remaining % 60000) / 1000);
 
   const segments = [
     { label: "DIAS", value: pad(days) },
     { label: "HORAS", value: pad(hours) },
     { label: "MINUTOS", value: pad(minutes) },
-    { label: "SEGUNDOS", value: pad(seconds) },
   ] as const;
 
   return (

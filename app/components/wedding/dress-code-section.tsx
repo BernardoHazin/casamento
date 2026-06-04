@@ -61,8 +61,8 @@ export function DressCodeSection() {
       />
 
       <div className="text-center">
-        <h2 className="font-serif text-xl font-semibold text-blue-grey">
-          DRESSCODE
+        <h2 className="font-cormorant-sc text-xl font-semibold text-blue-grey">
+          Dresscode
         </h2>
         <p className="mt-1 font-serif text-sm font-medium text-terracotta">
           ESPORTE FINO

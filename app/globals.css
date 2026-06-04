@@ -23,11 +23,18 @@
   --font-script: var(--font-script-family);
   --font-great-vibes: var(--font-great-vibes-family);
   --font-serif: var(--font-serif-family);
+  --font-cormorant-sc: var(--font-cormorant-sc-family);
   --font-sans: var(--font-serif-family);
 }
 
 .root {
   isolation: isolate;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
 }
 
 body {

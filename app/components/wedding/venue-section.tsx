@@ -6,12 +6,12 @@ import { IconPin } from "./icons";
 export function VenueSection() {
   return (
     <section className="bg-cream px-6 py-16">
-      <div className="mx-auto flex flex-col items-center gap-10 text-center">
+      <div className="mx-auto flex flex-col items-center gap-6 text-center">
         <IconPin className="h-10 w-10 text-terracotta" aria-hidden />
 
         <div>
-          <h2 className="font-serif text-3xl font-semibold tracking-[0.12em] text-wedding-slate">
-            O LOCAL
+          <h2 className="font-cormorant-sc text-xl font-semibold tracking-[0.12em] text-wedding-slate">
+            O Local
           </h2>
         </div>
 

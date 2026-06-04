@@ -4,13 +4,13 @@ import { WaveDivider } from "./wave-divider";
 
 export function HeroSection() {
   return (
-    <section className="relative">
-      <div className="pointer-events-none absolute inset-0 z-1">
+    <section className="relative w-full min-w-0 overflow-hidden">
+      <div className="pointer-events-none absolute inset-0 z-1 min-h-full min-w-full">
         <Image
           src="/olinda.png"
           alt=""
           fill
-          className="object-cover object-center"
+          className="min-h-full min-w-full object-cover object-bottom sm:object-center"
           sizes="100vw"
           priority
         />
@@ -20,8 +20,8 @@ export function HeroSection() {
         <Image
           src="/flower-3.png"
           alt=""
-          width={240}
-          height={200}
+          width={180}
+          height={120}
           className="object-cover object-center"
           priority
         />
@@ -29,7 +29,7 @@ export function HeroSection() {
 
       <div className="pointer-events-none absolute right-3 top-3 z-10 w-18 sm:right-6 sm:top-6 sm:w-21">
         <Image
-          src="/monograma.png"
+          src="/monograma.svg"
           alt="Monograma IB"
           width={96}
           height={96}
@@ -59,7 +59,7 @@ export function HeroSection() {
         </p>
       </div>
 
-      <div className="relative z-10">
+      <div className="relative z-10 w-full">
         <WaveDivider />
       </div>
     </section>

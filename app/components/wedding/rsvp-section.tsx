@@ -61,7 +61,7 @@ export function RsvpSection({ guests }: RsvpSectionProps) {
             <div className="flex flex-col gap-2">
               <label
                 htmlFor="companion-name"
-                className="font-sans text-sm font-medium text-foreground/80"
+                className="font-sans text-sm font-medium text-blue-grey"
               >
                 Nome do acompanhante
               </label>
@@ -81,7 +81,7 @@ export function RsvpSection({ guests }: RsvpSectionProps) {
           <div className="flex flex-col gap-2">
             <span
               id="rsvp-attendance-label"
-              className="font-sans text-sm font-medium text-foreground/80"
+              className="font-sans text-sm font-medium text-blue-grey"
             >
               Confirme ou decline o convite
             </span>

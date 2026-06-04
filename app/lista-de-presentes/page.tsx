@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { GiftCard } from "@/app/components/wedding/gifts/gift-card";
 import { PixCard } from "@/app/components/wedding/gifts/pix-card";
-import { IconGift, IconHeart } from "@/app/components/wedding/icons";
 import { getPresentes } from "@/lib/presentes";
 import { giftListSubtitle } from "@/site.config";
 
@@ -35,15 +34,8 @@ export default async function GiftListPage() {
   return (
     <main className="relative mx-auto flex min-h-full w-full max-w-[500px] flex-col overflow-hidden pb-16">
       <div className="pointer-events-none absolute inset-0 z-1">
-        <div className="absolute right-0 top-0 h-28 w-28 opacity-90 sm:h-32 sm:w-32">
-          <Image
-            src="/flower-1.png"
-            alt=""
-            fill
-            className="object-cover object-right-top"
-            sizes="128px"
-            priority
-          />
+        <div className="absolute right-0 top-0 opacity-90">
+          <Image src="/flower-1.png" alt="" width={200} height={200} priority />
         </div>
       </div>
 
@@ -127,7 +119,7 @@ export default async function GiftListPage() {
             ))}
           </div>
         ) : (
-          <p className="mt-10 text-center font-sans text-sm text-foreground/70">
+          <p className="mt-10 text-center font-sans text-sm text-blue-grey">
             Não foi possível carregar a lista agora. Tente novamente em
             instantes.
           </p>

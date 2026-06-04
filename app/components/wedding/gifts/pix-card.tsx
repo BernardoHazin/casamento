@@ -12,7 +12,7 @@ export function PixCard() {
   return (
     <div className="w-full rounded-2xl border border-wedding-slate/20 bg-white p-5 shadow-sm">
       <div className="flex items-start gap-4">
-        <p className="flex-1 font-sans text-sm leading-relaxed text-foreground/80">
+        <p className="flex-1 font-sans text-sm leading-relaxed text-blue-grey">
           {pix.instructions}
         </p>
 
