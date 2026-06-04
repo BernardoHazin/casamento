@@ -52,7 +52,7 @@ export function PresenteEditForm({ presente }: PresenteEditFormProps) {
 
         <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-lg border border-wedding-slate/15 bg-cream/30">
           <Image
-            src={`/${icon}.png`}
+            src={`/gifts/${icon}.png`}
             alt=""
             fill
             className="object-contain p-1"
@@ -132,7 +132,7 @@ export function PresenteEditForm({ presente }: PresenteEditFormProps) {
           </datalist>
           <p className="font-sans text-xs text-foreground/55">
             Arquivo em{" "}
-            <span className="font-mono">public/{icon || "…"}.png</span>
+            <span className="font-mono">public/gifts/{icon || "…"}.png</span>
           </p>
         </div>
       </div>

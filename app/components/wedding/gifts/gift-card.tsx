@@ -26,7 +26,12 @@ export function GiftCard({ presente }: GiftCardProps) {
         </p>
 
         <div className="mx-auto my-3 flex h-40 w-40 items-center justify-center">
-          <Image src={`/${presente.icon}.png`} alt="" width={160} height={80} />
+          <Image
+            src={`/gifts/${presente.icon}.png`}
+            alt=""
+            width={160}
+            height={80}
+          />
         </div>
 
         <h3 className="min-h-14 text-center font-serif text-base leading-snug text-blue-grey">
