@@ -31,6 +31,7 @@ export function GiftCard({ presente }: GiftCardProps) {
             alt=""
             width={160}
             height={80}
+            className="w-auto h-auto"
           />
         </div>
 
