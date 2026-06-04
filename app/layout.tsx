@@ -4,6 +4,7 @@ import {
   Great_Vibes,
   Mrs_Saint_Delafield,
 } from "next/font/google";
+import { ToastProvider } from "@/app/components/toast-provider";
 import "./globals.css";
 
 const scriptFont = Mrs_Saint_Delafield({
@@ -45,6 +46,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col text-foreground">
         <div className="root min-h-full flex flex-col flex-1">{children}</div>
+        <ToastProvider />
       </body>
     </html>
   );

@@ -28,10 +28,15 @@ export const venue = {
 export const giftListUrl = "/lista-de-presentes";
 
 export const giftListSubtitle =
-  "Escolha um item da lista para presentear os noivos de forma simbólica.";
+  "Escolha um valor e faça parte desse novo capítulo com a gente!";
 
 export const pix = {
-  key: "casamento.bel.bernardo@gmail.com",
+  key: "isabelatelesf@gmail.com",
+  /** Shown on the PIX QR (max 25 characters; accents are normalized by pixbrasil). */
+  merchantName: "Isabela Teles",
+  merchantCity: "Recife",
+  message: "Presente para Isabela e Bernardo",
+  /** Optional static image; when empty, a QR is generated from the PIX key. */
   qrCodeImage: "" as string,
   instructions:
     "Para presentear os noivos agora mesmo, é só abrir o aplicativo do seu banco e apontar a câmera para o QR Code ao lado.",
