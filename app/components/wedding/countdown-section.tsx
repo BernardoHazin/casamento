@@ -101,7 +101,7 @@ export function CountdownSection() {
               <span className="font-sans text-3xl font-semibold tabular-nums tracking-widest text-wedding-slate sm:text-4xl">
                 {s.value}
               </span>
-              <span className="font-sans text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-foreground/55 sm:text-xs">
+              <span className="font-sans text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-wedding-slate sm:text-xs">
                 {s.label}
               </span>
             </div>

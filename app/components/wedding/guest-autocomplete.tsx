@@ -8,6 +8,13 @@ type GuestAutocompleteProps = {
   onGuestChange?: (guest: Convidado | null) => void;
 };
 
+function normalizeForSearch(value: string): string {
+  return value
+    .normalize("NFD")
+    .replace(/\p{M}/gu, "")
+    .toLowerCase();
+}
+
 export function GuestAutocomplete({
   guests,
   onGuestChange,
@@ -17,14 +24,14 @@ export function GuestAutocomplete({
   const [open, setOpen] = useState(false);
 
   const filteredGuests = useMemo(() => {
-    const normalizedQuery = query.trim().toLowerCase();
+    const normalizedQuery = normalizeForSearch(query.trim());
 
     if (!normalizedQuery) {
       return guests;
     }
 
     return guests.filter((guest) =>
-      guest.id.toLowerCase().includes(normalizedQuery),
+      normalizeForSearch(guest.id).includes(normalizedQuery),
     );
   }, [guests, query]);
 

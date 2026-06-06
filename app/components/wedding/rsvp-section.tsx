@@ -69,7 +69,6 @@ export function RsvpSection({ guests }: RsvpSectionProps) {
                 id="companion-name"
                 name="companion"
                 type="text"
-                required
                 value={companionName}
                 onChange={(event) => setCompanionName(event.target.value)}
                 placeholder="Como no convite"

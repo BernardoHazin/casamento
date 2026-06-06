@@ -73,13 +73,6 @@ export async function submitRsvp(
       };
     }
 
-    if (guest.hasCompanion && !companion) {
-      return {
-        ok: false,
-        message: "Informe o nome do acompanhante.",
-      };
-    }
-
     if (companion && companion.length > 120) {
       return {
         ok: false,
