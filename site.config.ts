@@ -21,8 +21,7 @@ export const INVITATION_PARAGRAPH =
 export const venue = {
   name: "Sobrado Mourisco",
   lines: ["Rua 27 de Janeiro, n° 25, Carmo, Olinda - PE."],
-  mapsUrl:
-    "https://www.google.com/maps/search/?api=1&query=Olinda+PE+Terra%C3%A7o+Mourisco",
+  mapsUrl: "https://maps.app.goo.gl/F6E3vyWwDzGLcPQu7",
 } as const;
 
 export const giftListUrl = "/lista-de-presentes";

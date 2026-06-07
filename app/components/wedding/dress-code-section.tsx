@@ -51,7 +51,7 @@ function DressCodeCard({
 
 export function DressCodeSection() {
   return (
-    <section className="relative flex flex-col items-center gap-4 bg-lavender-mist px-4 pt-10 pb-80">
+    <section className="relative flex flex-col items-center gap-4 bg-baby-blue px-4 pt-10 pb-80">
       <Image
         src="/dresscode-bow-tie.png"
         alt=""
