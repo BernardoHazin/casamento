@@ -34,7 +34,7 @@ export function TimelineSection() {
         alt="Timeline Footer"
         width={409}
         height={409}
-        className="absolute w-full -bottom-30 right-0 z-10"
+        className="absolute w-full -bottom-25 sm:-bottom-30 right-0 z-10"
       />
     </section>
   );

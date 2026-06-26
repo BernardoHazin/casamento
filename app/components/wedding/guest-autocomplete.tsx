@@ -9,10 +9,7 @@ type GuestAutocompleteProps = {
 };
 
 function normalizeForSearch(value: string): string {
-  return value
-    .normalize("NFD")
-    .replace(/\p{M}/gu, "")
-    .toLowerCase();
+  return value.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase();
 }
 
 export function GuestAutocomplete({

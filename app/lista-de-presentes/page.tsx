@@ -42,7 +42,7 @@ export default async function GiftListPage() {
       <div className="relative z-10 flex flex-col px-5 pt-6 sm:px-8">
         <Link
           href="/"
-          className="inline-flex items-center gap-1 self-start font-sans text-xs font-medium uppercase tracking-[0.12em] text-blue-grey/80 transition hover:text-blue-grey"
+          className="inline-flex items-center gap-1 self-start font-sans text-xs font-medium uppercase tracking-[0.12em] text-blue-grey transition hover:text-blue-grey"
         >
           <ChevronLeft className="h-4 w-4" />
           Voltar

@@ -76,7 +76,7 @@ export function RsvpSection({ guests }: RsvpSectionProps) {
                 type="text"
                 value={companionName}
                 onChange={(event) => setCompanionName(event.target.value)}
-                placeholder="Como no convite"
+                placeholder="Digite o nome completo do acompanhante"
                 className="min-h-12 w-full rounded-xl border border-wedding-slate/25 bg-cream/40 px-4 font-sans text-base text-foreground outline-none transition placeholder:text-foreground/35 focus:border-wedding-slate/50 focus:ring-2 focus:ring-wedding-slate/20"
               />
             </div>
