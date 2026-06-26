@@ -21,7 +21,7 @@ export function GiftCard({ presente }: GiftCardProps) {
   return (
     <>
       <article className="flex flex-col items-center rounded-2xl border border-wedding-slate/20 bg-white p-4 shadow-sm">
-        <p className="text-center font-sans text-lg font-semibold uppercase tracking-[0.14em] text-blue-grey/70">
+        <p className="text-center font-sans text-lg font-semibold uppercase tracking-[0.14em] text-blue-grey">
           {presente.quotes}/{PRESENTE_TOTAL_QUOTES}
         </p>
 

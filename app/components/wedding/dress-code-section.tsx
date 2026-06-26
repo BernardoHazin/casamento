@@ -51,7 +51,7 @@ function DressCodeCard({
 
 export function DressCodeSection() {
   return (
-    <section className="relative flex flex-col items-center gap-4 bg-baby-blue px-4 pt-10 pb-80">
+    <section className="relative flex flex-col items-center gap-4 bg-baby-blue px-4 pt-10 pb-[600px]">
       <Image
         src="/dresscode-bow-tie.png"
         alt=""
@@ -88,7 +88,7 @@ export function DressCodeSection() {
       </div>
 
       <div className="absolute left-0 bottom-0">
-        <Image src="/dresscode-footer.png" alt="" width={500} height={249} />
+        <Image src="/FAC_9915.png" alt="" width={500} height={249} />
       </div>
     </section>
   );

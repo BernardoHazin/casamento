@@ -11,6 +11,11 @@ import Image from "next/image";
 
 const initialState: RsvpState = null;
 
+const ATTENDANCE_ITEMS = [
+  { value: "sim", label: "Sim, estarei presente" },
+  { value: "nao", label: "Não poderei ir" },
+] as const satisfies ReadonlyArray<{ value: RsvpConfirmation; label: string }>;
+
 function getStoredAttendance(confirmed: string): RsvpConfirmation | "" {
   return confirmed === "sim" || confirmed === "nao" ? confirmed : "";
 }
@@ -88,6 +93,7 @@ export function RsvpSection({ guests }: RsvpSectionProps) {
             <Select.Root
               name="attendance"
               required
+              items={ATTENDANCE_ITEMS}
               value={attendance || null}
               onValueChange={(value) =>
                 setAttendance((value as RsvpConfirmation | null) ?? "")
@@ -105,18 +111,15 @@ export function RsvpSection({ guests }: RsvpSectionProps) {
                 <Select.Positioner align="start" sideOffset={8}>
                   <Select.Popup className="z-50 min-w-(--anchor-width) rounded-xl border border-wedding-slate/15 bg-white py-1 shadow-lg outline-none">
                     <Select.List className="max-h-60 overflow-auto outline-none">
-                      <Select.Item
-                        value="sim"
-                        className="cursor-pointer px-4 py-3 font-sans text-sm text-foreground outline-none data-highlighted:bg-cream/80"
-                      >
-                        <Select.ItemText>Sim, estarei presente</Select.ItemText>
-                      </Select.Item>
-                      <Select.Item
-                        value="nao"
-                        className="cursor-pointer px-4 py-3 font-sans text-sm text-foreground outline-none data-highlighted:bg-cream/80"
-                      >
-                        <Select.ItemText>Não poderei ir</Select.ItemText>
-                      </Select.Item>
+                      {ATTENDANCE_ITEMS.map((option) => (
+                        <Select.Item
+                          key={option.value}
+                          value={option.value}
+                          className="cursor-pointer px-4 py-3 font-sans text-sm text-foreground outline-none data-highlighted:bg-cream/80"
+                        >
+                          <Select.ItemText>{option.label}</Select.ItemText>
+                        </Select.Item>
+                      ))}
                     </Select.List>
                   </Select.Popup>
                 </Select.Positioner>

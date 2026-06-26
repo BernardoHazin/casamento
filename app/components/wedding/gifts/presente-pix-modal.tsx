@@ -30,7 +30,7 @@ export function PresentePixModal({
               {presente.name}
             </Dialog.Title>
 
-            <p className="font-sans text-sm font-medium text-foreground/85">
+            <p className="font-sans text-lg font-medium text-blue-grey">
               {formatPresentePrice(presente.price)}
             </p>
 
@@ -43,7 +43,7 @@ export function PresentePixModal({
               />
             )}
 
-            <p className="text-center font-sans text-xs leading-relaxed text-foreground/75">
+            <p className="text-center font-sans text-sm leading-relaxed text-blue-grey">
               {pix.instructions}
             </p>
 
@@ -55,7 +55,7 @@ export function PresentePixModal({
               Copiar código PIX
             </Button>
 
-            <Dialog.Close className="font-sans text-xs font-medium uppercase tracking-[0.12em] text-blue-grey/70 outline-none transition hover:text-blue-grey focus-visible:ring-2 focus-visible:ring-blue-grey/30">
+            <Dialog.Close className="font-sans text-xs font-medium uppercase tracking-[0.12em] text-blue-grey outline-none transition hover:text-blue-grey focus-visible:ring-2 focus-visible:ring-blue-grey/30">
               Fechar
             </Dialog.Close>
           </Dialog.Popup>

@@ -27,12 +27,12 @@ export function HeroSection() {
         />
       </div>
 
-      <div className="pointer-events-none absolute right-3 top-3 z-10 w-18 sm:right-6 sm:top-6 sm:w-21">
+      <div className="pointer-events-none absolute right-3 top-3 z-10 w-12 sm:right-6 sm:top-6 sm:w-21">
         <Image
           src="/monograma.svg"
           alt="Monograma IB"
-          width={96}
-          height={96}
+          width={72}
+          height={72}
           className=""
           priority
         />
@@ -41,7 +41,7 @@ export function HeroSection() {
       <div className="relative z-10 mx-auto flex min-h-[min(88vh,820px)] max-w-[600px] flex-col items-center px-6 pb-8 pt-44 text-center">
         <p className="text-balance font-serif text-xl font-medium leading-snug text-wedding-slate">
           O início do nosso{" "}
-          <span className="block font-script text-6xl font-normal leading-none">
+          <span className="relative bottom-4 block font-script text-6xl font-normal leading-none">
             para sempre
           </span>
         </p>
@@ -55,7 +55,7 @@ export function HeroSection() {
         </p>
 
         <p className="mt-2 pr-24 text-upper text-left w-full font-serif text-md leading-[1.20] text-terracotta">
-          01 de Novembro de 2026 <br /> 16h00
+          01 de Novembro de 2026 <br /> 16H00
         </p>
       </div>
 
