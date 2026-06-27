@@ -126,12 +126,6 @@ export default async function GiftListPage() {
         )}
 
         <footer className="mt-12 flex flex-col items-center gap-3 text-center">
-          <p className="font-serif text-sm font-semibold uppercase tracking-[0.16em] text-blue-grey">
-            Obrigado por fazer parte desse momento!
-          </p>
-
-          <Image src="/heart.png" alt="" width={14} height={14} />
-
           <Image
             src="/monograma.svg"
             alt="Monograma Isabela & Bernardo"

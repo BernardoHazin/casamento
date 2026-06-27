@@ -87,6 +87,14 @@ export function DressCodeSection() {
         />
       </div>
 
+      <div className="flex items-center justify-center gap-2 text-center my-12">
+        <p className="font-serif text-md leading-snug text-blue-grey">
+          Obrigado por fazer parte desse momento!
+        </p>
+
+        <Image src="/heart.png" alt="Heart" width={12} height={12} />
+      </div>
+
       <div className="absolute left-0 bottom-0">
         <Image src="/FAC_9915.png" alt="" width={500} height={249} />
       </div>
